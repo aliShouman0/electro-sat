@@ -1,1 +1,1 @@
-# electro-sat
+# ElectroSat
