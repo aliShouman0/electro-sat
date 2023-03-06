@@ -1,5 +1,8 @@
 # ElectroSat
 
-## something awesome is going 🚀🤩
+<h3>something awesome is going 🚀🤩</h3> 
 
-<img src="./readme/color-logo.png" width="600px" height="450px"/>
+<p align="center"> 
+  <img src="./readme/color-logo.png" width="600px" height="450px"/>
+</p>
+
