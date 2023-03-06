@@ -1,14 +1,19 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow,screen } = require("electron");
 const path = require("path");
+
 
 require("@electron/remote/main").initialize();
 
 function createWindow() {
   // Create the browser window.
+  const { width, height } = screen.getPrimaryDisplay().workAreaSize
+
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
-    // icon: path.join(__dirname, "./public/logo-gold.ico"),
+    width,
+    height,
+    // fullscreen: true, // Set the app to open in fullscreen mode
+    // resizable: false, // Set the app to be non-resizable
+    icon: path.join(__dirname, "transparent-logo.ico"),
     webPreferences: {
       enableRemoteModule: true,
     },
@@ -16,12 +21,18 @@ function createWindow() {
   //enableRemoteModule
   // this will allow us to run functions in
   // the background process triggered by
-  // events happening in react components
+  // events happening in react components 
+  win.setMinimumSize(800, 700) 
   win.loadURL("http://localhost:3000");
- 
-}
+  
+} 
 
 app.on("ready", createWindow);
+
+app.whenReady().then(() => {
+  const iconPath = path.join(__dirname, "transparent-logo.ico");
+  app.setWindowIcon(iconPath);
+});
 
 // Quit when all windows are closed.
 app.on("window-all-closed", function () {
