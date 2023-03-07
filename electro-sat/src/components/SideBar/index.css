@@ -1,0 +1,12 @@
+.side-link p {
+  background-color: white;
+}
+
+.side-link .active p {
+  background-color: #00d1cd;
+  font-weight: bolder;
+}
+
+.active p:hover {
+  background-color: rgba(0, 209, 205,0.8);
+}
