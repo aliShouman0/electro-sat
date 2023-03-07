@@ -1,7 +1,16 @@
 import React from "react"; 
+import { useNavigate } from "react-router-dom";
+
 import logo from "../../assets/images/transparent-logo.png";
 
 function Login() {
+  const navigate = useNavigate();
+
+  const validate=(e)=>{
+    console.log("sa")
+    navigate("/dashboard");
+  }
+
   return (
     <div className="h-screen w-screen bg-primary flex flex-col justify-center items-center ">
       <div className="logo h-1/3 w-1/4">
@@ -35,7 +44,7 @@ function Login() {
             كلمة المرور
           </label>
         </div>
-        <button className="btn  mt-5 bg-secondary p-2 rounded-xl text-white text-xl font-bold w-full hover:opacity-80">تسجيل الدخول</button>
+        <button className="btn  mt-5 bg-secondary p-2 rounded-xl text-white text-xl font-bold w-full hover:opacity-80" onClick={validate}>تسجيل الدخول</button>
       </div>
     </div>
   );
