@@ -1,9 +1,10 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./index.css";
 import { faGear } from "@fortawesome/free-solid-svg-icons";
+
 import USDInfoBox from "../USDInfoBox/USDInfoBox";
+import "./index.css";
 
 function SideBar() {
   return (
@@ -14,7 +15,7 @@ function SideBar() {
             لوحة القيادة
           </p>
         </NavLink>
-        <NavLink to={"/login"}>
+        <NavLink to={"/daily"}>
           <p className="w-full h-12  mb-3 flex items-center justify-center  hover:opacity-80 ">
             اليوميه
           </p>
