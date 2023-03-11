@@ -30,7 +30,7 @@ function Daily() {
       headerName: "الاجمالي",
       type: "string",
       width: 60,
-      editable: true,
+      editable: false,
       align: "center",
       headerAlign: "center",
     },
@@ -39,7 +39,7 @@ function Daily() {
       headerName: "الفردي",
       type: "string",
       width: 60,
-      editable: true,
+      editable: false,
       align: "center",
       headerAlign: "center",
     },
@@ -75,7 +75,7 @@ function Daily() {
       headerName: "اسم الصنف",
       type: "string",
       width: 80,
-      editable: true,
+      editable: false,
       align: "center",
       headerAlign: "center",
     },
@@ -84,7 +84,7 @@ function Daily() {
       headerName: "اسم المنتج",
       type: "string",
       width: 80,
-      editable: true,
+      editable: false,
       align: "center",
       headerAlign: "center",
     },
@@ -102,7 +102,7 @@ function Daily() {
       headerName: "اسم المسخدم",
       type: "string",
       width: 80,
-      editable: true,
+      editable: false,
       align: "center",
       headerAlign: "center",
     },
@@ -111,7 +111,7 @@ function Daily() {
       headerName: "الوقت",
       type: "string",
       width: 80,
-      editable: true,
+      editable: false,
       align: "center",
       headerAlign: "center",
     },
@@ -237,30 +237,32 @@ function Daily() {
           </button>
         </div>
 
-        <div className="sales w-full h-80  mt-5 flex flex-col items-center  ">
+        <div className="sales w-full h-full  mt-5 flex flex-col items-center  ">
           <div className="title w-1/2 mb-3 bg-secondary text-center  py-1 rounded-xl">
             <p>المبيعات</p>
           </div>
 
-          <div className="w-full h-80   ">
+          <div className="w-full h-full ">
             <DataGrid
               rows={rows}
               columns={columns}
               pageSize={5}
-              // rowsPerPageOptions={[3, 5, 10]}
+              rowsPerPageOptions={[15, 25, 50]}
+              rowHeight={40}
               checkboxSelection={false}
               selectionModel={selectionModel}
               onSelectionModelChange={handleSelectionModelChange}
               sx={{
                 boxShadow:1,
                 fontSize:14,
-                border: 0
 
-              }}
-              className="border-r"
+              }}  
             />
           </div>
         </div>
+
+     
+
       </main>
     </>
   );
