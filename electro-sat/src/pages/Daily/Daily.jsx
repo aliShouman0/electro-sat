@@ -261,7 +261,17 @@ function Daily() {
           </div>
         </div>
 
-     
+        <div className="creditor w-full  h-auto   mt-5 flex flex-col items-center  ">
+          <div className="title w-1/2 mb-3 bg-secondary text-center  py-1 rounded-xl">
+            <p>دفع دائن</p>
+          </div>
+        </div>
+
+        <div className="expenses  w-full  h-auto   mt-5 flex flex-col items-center  ">
+          <div className="title w-1/2 mb-3 bg-secondary text-center  py-1 rounded-xl">
+            <p>المصاريف</p>
+          </div>
+        </div>
 
       </main>
     </>
