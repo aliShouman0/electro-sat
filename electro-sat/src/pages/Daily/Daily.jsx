@@ -6,101 +6,212 @@ import { DataGrid } from "@mui/x-data-grid";
 
 function Daily() {
   const columns = [
-    { field: "id", headerName: "ID", width: 5, editable: false },
     {
       field: "paid_rest_usd",
       headerName: "المدفوع/الباقي USD ",
-      width: 100,
+      type: "string",
+      width: 125,
       editable: true,
+      align: "center",
+      headerAlign: "center",
+      border: 1
     },
     {
       field: "paid_rest_lira",
       headerName: "المدفوع/الباقي L.L",
-      width: 100,
+      type: "string",
+      width: 125,
       editable: true,
+      align: "center",
+      headerAlign: "center",
     },
     {
       field: "total_price",
       headerName: "الاجمالي",
-      type: "number",
-      width: 50,
+      type: "string",
+      width: 60,
       editable: true,
+      align: "center",
+      headerAlign: "center",
     },
     {
       field: "single_price",
       headerName: "الفردي",
-      type: "number",
-      width: 50,
+      type: "string",
+      width: 60,
       editable: true,
+      align: "center",
+      headerAlign: "center",
     },
     {
       field: "creditor",
       headerName: "دائن",
-      type: "number",
-      width: 50,
+      type: "string",
+      width: 60,
       editable: true,
+      align: "center",
+      headerAlign: "center",
     },
     {
       field: "agent",
       headerName: "العميل",
-      type: "number",
-      width: 50,
+      type: "string",
+      width: 60,
       editable: true,
+      align: "center",
+      headerAlign: "center",
     },
     {
       field: "quantity",
       headerName: "الكميه",
       type: "number",
-      width: 50,
+      width: 60,
       editable: true,
+      align: "center",
+      headerAlign: "center",
     },
     {
       field: "category",
       headerName: "اسم الصنف",
-      type: "number",
-      width: 50,
+      type: "string",
+      width: 80,
       editable: true,
+      align: "center",
+      headerAlign: "center",
     },
     {
       field: "product_name",
       headerName: "اسم المنتج",
-      type: "number",
-      width: 50,
+      type: "string",
+      width: 80,
       editable: true,
+      align: "center",
+      headerAlign: "center",
     },
     {
       field: "product_id",
       headerName: "رقم المنتج",
       type: "number",
-      width: 50,
+      width: 80,
       editable: true,
+      align: "center",
+      headerAlign: "center",
     },
     {
       field: "user_name",
       headerName: "اسم المسخدم",
-      type: "number",
-      width: 50,
+      type: "string",
+      width: 80,
       editable: true,
+      align: "center",
+      headerAlign: "center",
     },
     {
       field: "time",
       headerName: "الوقت",
-      type: "number",
-      width: 50,
+      type: "string",
+      width: 80,
       editable: true,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "id",
+      headerName: "ID",
+      width: 15,
+      editable: false,
+      align: "center",
+      headerAlign: "center",
     },
   ];
 
   const rows = [
-    { id: 1, lastName: "Snow", firstName: "Jon", age: 35 },
-    { id: 2, lastName: "Lannister", firstName: "Cersei", age: 42 },
-    { id: 3, lastName: "Lannister", firstName: "Jaime", age: 45 },
-    { id: 4, lastName: "Stark", firstName: "Arya", age: 16 },
-    { id: 5, lastName: "Targaryen", firstName: "Daenerys", age: null },
-    { id: 6, lastName: "Melisandre", firstName: "null", age: 100 },
-    { id: 7, lastName: "Clifford", firstName: "Ferrara", age: 44 },
-    { id: 8, lastName: "Frances", firstName: "Rossini", age: 36 },
-    { id: 9, lastName: "Roxie", firstName: "Harvey", age: 65 },
+    {
+      id: 1,
+      paid_rest_usd: "15$",
+      paid_rest_lira: "115,000 L.L",
+      total_price: "45$",
+      single_price: 1,
+      creditor: "لا",
+      agent: "علي",
+      quantity: 5,
+      category: "هواتف",
+      product_name: "شاحن",
+      product_id: 1567,
+      user_name: "ali",
+      time: "12:35",
+    },
+    {
+      id: 1,
+      paid_rest_usd: "15$",
+      paid_rest_lira: "115,000 L.L",
+      total_price: "45$",
+      single_price: 1,
+      creditor: "لا",
+      agent: "علي",
+      quantity: 5,
+      category: "هواتف",
+      product_name: "شاحن",
+      product_id: 1567,
+      user_name: "ali",
+      time: "12:35",
+    }, {
+      id: 1,
+      paid_rest_usd: "15$",
+      paid_rest_lira: "115,000 L.L",
+      total_price: "45$",
+      single_price: 1,
+      creditor: "لا",
+      agent: "علي",
+      quantity: 5,
+      category: "هواتف",
+      product_name: "شاحن",
+      product_id: 1567,
+      user_name: "ali",
+      time: "12:35",
+    }, {
+      id: 1,
+      paid_rest_usd: "15$",
+      paid_rest_lira: "115,000 L.L",
+      total_price: "45$",
+      single_price: 1,
+      creditor: "لا",
+      agent: "علي",
+      quantity: 5,
+      category: "هواتف",
+      product_name: "شاحن",
+      product_id: 1567,
+      user_name: "ali",
+      time: "12:35",
+    }, {
+      id: 1,
+      paid_rest_usd: "15$",
+      paid_rest_lira: "115,000 L.L",
+      total_price: "45$",
+      single_price: 1,
+      creditor: "لا",
+      agent: "علي",
+      quantity: 5,
+      category: "هواتف",
+      product_name: "شاحن",
+      product_id: 1567,
+      user_name: "ali",
+      time: "12:35",
+    }, {
+      id: 1,
+      paid_rest_usd: "15$",
+      paid_rest_lira: "115,000 L.L",
+      total_price: "45$",
+      single_price: 1,
+      creditor: "لا",
+      agent: "علي",
+      quantity: 5,
+      category: "هواتف",
+      product_name: "شاحن",
+      product_id: 1567,
+      user_name: "ali",
+      time: "12:35",
+    },
   ];
 
   const [selectionModel, setSelectionModel] = useState([]);
@@ -113,7 +224,7 @@ function Daily() {
     <>
       <NavBar userName={"علي شومان"} userImg={userImg} />
       <SideBar />
-      <main className="fixed  top-28  right-38 w-5/6  h-3/4 flex flex-col items-center  overflow-y-auto  ">
+      <main className="fixed   w-[80%]   h-3/4 flex flex-col items-center  overflow-y-auto overflow-x-hidden    top-28  right-44">
         <div className="top-bar bg-greyBar h-14 py-2 w-5/6  rounded-lg flex items-center  justify-end font-bold  ">
           <button className="bg-secondary mr-4 py-2 px-6   text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	    ">
             صرف
@@ -131,15 +242,22 @@ function Daily() {
             <p>المبيعات</p>
           </div>
 
-          <div className=" h-72 w-5/6 ">
+          <div className="w-full h-80   ">
             <DataGrid
               rows={rows}
               columns={columns}
               pageSize={5}
-              rowsPerPageOptions={[3, 5, 10]}
+              // rowsPerPageOptions={[3, 5, 10]}
               checkboxSelection={false}
               selectionModel={selectionModel}
               onSelectionModelChange={handleSelectionModelChange}
+              sx={{
+                boxShadow:1,
+                fontSize:14,
+                border: 0
+
+              }}
+              className="border-r"
             />
           </div>
         </div>
