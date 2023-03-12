@@ -5,6 +5,176 @@ import SideBar from "../../components/SideBar/SideBar";
 import { DataGrid } from "@mui/x-data-grid";
 
 function Daily() {
+  const salesColumns = [
+    {
+      field: "paid_rest_usd",
+      headerName: "المدفوع/الباقي USD ",
+      type: "string",
+      width: 125,
+      editable: true,
+      align: "center",
+      headerAlign: "center",
+      border: 1,
+    },
+    {
+      field: "paid_rest_lira",
+      headerName: "المدفوع/الباقي L.L",
+      type: "string",
+      width: 125,
+      editable: true,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "total_price",
+      headerName: "الاجمالي",
+      type: "string",
+      width: 60,
+      editable: false,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "single_price",
+      headerName: "الفردي",
+      type: "string",
+      width: 60,
+      editable: false,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "creditor",
+      headerName: "دائن",
+      type: "string",
+      width: 60,
+      editable: true,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "agent",
+      headerName: "العميل",
+      type: "string",
+      width: 60,
+      editable: true,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "quantity",
+      headerName: "الكميه",
+      type: "number",
+      width: 60,
+      editable: true,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "category",
+      headerName: "اسم الصنف",
+      type: "string",
+      width: 80,
+      editable: false,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "product_name",
+      headerName: "اسم المنتج",
+      type: "string",
+      width: 80,
+      editable: false,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "product_id",
+      headerName: "رقم المنتج",
+      type: "number",
+      width: 80,
+      editable: true,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "user_name",
+      headerName: "اسم المسخدم",
+      type: "string",
+      width: 80,
+      editable: false,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "time",
+      headerName: "الوقت",
+      type: "string",
+      width: 80,
+      editable: false,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "id",
+      headerName: "ID",
+      width: 15,
+      editable: false,
+      align: "center",
+      headerAlign: "center",
+    },
+  ];
+
+  const creditorColumns = [
+    {
+      field: "paid_rest_usd",
+      headerName: "المدفوع/الباقي USD ",
+      type: "string",
+      width: 125,
+      editable: true,
+      align: "center",
+      headerAlign: "center",
+      border: 1,
+    },
+    {
+      field: "paid_rest_lira",
+      headerName: "المدفوع/الباقي L.L",
+      type: "string",
+      width: 125,
+      editable: true,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "user_name",
+      headerName: "اسم المسخدم",
+      type: "string",
+      width: 80,
+      editable: false,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "time",
+      headerName: "الوقت",
+      type: "string",
+      width: 80,
+      editable: false,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
+      field: "id",
+      headerName: "ID",
+      width: 15,
+      editable: false,
+      align: "center",
+      headerAlign: "center",
+    },
+  ];
+
+  const expensesColumns = [];
+
   const columns = [
     {
       field: "paid_rest_usd",
@@ -263,7 +433,7 @@ function Daily() {
             <div className="w-full h-full ">
               <DataGrid
                 rows={rows}
-                columns={columns}
+                columns={salesColumns}
                 pageSize={5}
                 rowsPerPageOptions={[15, 25, 50]}
                 rowHeight={40}
@@ -296,10 +466,10 @@ function Daily() {
           </div>
 
           {creditor && (
-            <div className="w-full h-full ">
+            <div className="w-auto  h-full ">
               <DataGrid
                 rows={rows}
-                columns={columns}
+                columns={creditorColumns}
                 pageSize={5}
                 rowsPerPageOptions={[15, 25, 50]}
                 rowHeight={40}
@@ -349,7 +519,6 @@ function Daily() {
             </div>
           )}
         </div>
-
       </main>
     </>
   );
