@@ -14,7 +14,7 @@ function Daily() {
       editable: true,
       align: "center",
       headerAlign: "center",
-      border: 1
+      border: 1,
     },
     {
       field: "paid_rest_lira",
@@ -155,7 +155,8 @@ function Daily() {
       product_id: 1567,
       user_name: "ali",
       time: "12:35",
-    }, {
+    },
+    {
       id: 1,
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
@@ -169,7 +170,8 @@ function Daily() {
       product_id: 1567,
       user_name: "ali",
       time: "12:35",
-    }, {
+    },
+    {
       id: 1,
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
@@ -183,7 +185,8 @@ function Daily() {
       product_id: 1567,
       user_name: "ali",
       time: "12:35",
-    }, {
+    },
+    {
       id: 1,
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
@@ -197,7 +200,8 @@ function Daily() {
       product_id: 1567,
       user_name: "ali",
       time: "12:35",
-    }, {
+    },
+    {
       id: 1,
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
@@ -215,7 +219,9 @@ function Daily() {
   ];
 
   const [selectionModel, setSelectionModel] = useState([]);
-
+  const [sales, setSales] = useState(true);
+  const [creditor, setCreditor] = useState(false);
+  const [expenses, setExpenses] = useState(false);
   const handleSelectionModelChange = (newSelection) => {
     setSelectionModel(newSelection.selectionModel);
   };
@@ -224,7 +230,7 @@ function Daily() {
     <>
       <NavBar userName={"علي شومان"} userImg={userImg} />
       <SideBar />
-      <main className="fixed   w-[80%]   h-3/4 flex flex-col items-center  overflow-y-auto overflow-x-hidden    top-28  right-44">
+      <main className="fixed   w-[80%] h-full flex flex-col items-center  overflow-y-auto overflow-x-hidden    top-28  right-44">
         <div className="top-bar bg-greyBar h-14 py-2 w-5/6  rounded-lg flex items-center  justify-end font-bold  ">
           <button className="bg-secondary mr-4 py-2 px-6   text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	    ">
             صرف
@@ -237,40 +243,111 @@ function Daily() {
           </button>
         </div>
 
-        <div className="sales w-full h-full  mt-5 flex flex-col items-center  ">
-          <div className="title w-1/2 mb-3 bg-secondary text-center  py-1 rounded-xl">
+        <div
+          className={`sales w-full ${
+            sales && "h-1/2"
+          } mt-5 flex flex-col items-center  `}
+        >
+          <div
+            className="title w-1/2 mb-3 bg-secondary text-center  py-1 rounded-xl cursor-pointer hover:opacity-70"
+            onClick={() => {
+              setSales(!sales);
+              setExpenses(false);
+              setCreditor(false);
+            }}
+          >
             <p>المبيعات</p>
           </div>
 
-          <div className="w-full h-full ">
-            <DataGrid
-              rows={rows}
-              columns={columns}
-              pageSize={5}
-              rowsPerPageOptions={[15, 25, 50]}
-              rowHeight={40}
-              checkboxSelection={false}
-              selectionModel={selectionModel}
-              onSelectionModelChange={handleSelectionModelChange}
-              sx={{
-                boxShadow:1,
-                fontSize:14,
-
-              }}  
-            />
-          </div>
+          {sales && (
+            <div className="w-full h-full ">
+              <DataGrid
+                rows={rows}
+                columns={columns}
+                pageSize={5}
+                rowsPerPageOptions={[15, 25, 50]}
+                rowHeight={40}
+                checkboxSelection={false}
+                selectionModel={selectionModel}
+                onSelectionModelChange={handleSelectionModelChange}
+                sx={{
+                  boxShadow: 1,
+                  fontSize: 14,
+                }}
+              />
+            </div>
+          )}
         </div>
 
-        <div className="creditor w-full  h-auto   mt-5 flex flex-col items-center  ">
-          <div className="title w-1/2 mb-3 bg-secondary text-center  py-1 rounded-xl">
+        <div
+          className={`creditor w-full ${
+            creditor && "h-1/2"
+          }    mt-5 flex flex-col items-center  `}
+        >
+          <div
+            className="title w-1/2 mb-3 bg-secondary text-center  py-1 rounded-xl cursor-pointer hover:opacity-70"
+            onClick={() => {
+              setSales(false);
+              setExpenses(false);
+              setCreditor(!creditor);
+            }}
+          >
             <p>دفع دائن</p>
           </div>
+
+          {creditor && (
+            <div className="w-full h-full ">
+              <DataGrid
+                rows={rows}
+                columns={columns}
+                pageSize={5}
+                rowsPerPageOptions={[15, 25, 50]}
+                rowHeight={40}
+                checkboxSelection={false}
+                selectionModel={selectionModel}
+                onSelectionModelChange={handleSelectionModelChange}
+                sx={{
+                  boxShadow: 1,
+                  fontSize: 14,
+                }}
+              />
+            </div>
+          )}
         </div>
 
-        <div className="expenses  w-full  h-auto   mt-5 flex flex-col items-center  ">
-          <div className="title w-1/2 mb-3 bg-secondary text-center  py-1 rounded-xl">
+        <div
+          className={`expenses w-full ${
+            expenses && "h-1/2"
+          }   mt-5 flex flex-col items-center  `}
+        >
+          <div
+            className="title w-1/2 mb-3 bg-secondary text-center  py-1 rounded-xl cursor-pointer hover:opacity-70"
+            onClick={() => {
+              setSales(false);
+              setExpenses(!expenses);
+              setCreditor(false);
+            }}
+          >
             <p>المصاريف</p>
           </div>
+          {expenses && (
+            <div className="w-full h-full ">
+              <DataGrid
+                rows={rows}
+                columns={columns}
+                pageSize={5}
+                rowsPerPageOptions={[15, 25, 50]}
+                rowHeight={40}
+                checkboxSelection={false}
+                selectionModel={selectionModel}
+                onSelectionModelChange={handleSelectionModelChange}
+                sx={{
+                  boxShadow: 1,
+                  fontSize: 14,
+                }}
+              />
+            </div>
+          )}
         </div>
 
       </main>
