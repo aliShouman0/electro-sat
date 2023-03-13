@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./pages/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Daily from "./pages/Daily/Daily";
+import Stock from "./pages/Stock/Stock";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Route path={"/login"} element={<Login />} /> 
       <Route path={"/dashboard"} element={<Dashboard />} /> 
       <Route path={"/daily"} element={<Daily  />} /> 
+      <Route path={"/stock"} element={<Stock  />} /> 
 
     </Routes>
   </BrowserRouter>
