@@ -26,6 +26,15 @@ function Daily() {
       headerAlign: "center",
     },
     {
+      field: "discount",
+      headerName: "حسم",
+      type: "string",
+      width: 80,
+      editable: true,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
       field: "total_price",
       headerName: "الاجمالي",
       type: "string",
@@ -146,6 +155,15 @@ function Daily() {
       headerAlign: "center",
     },
     {
+      field: "discount",
+      headerName: "حسم",
+      type: "string",
+      width: 80,
+      editable: true,
+      align: "center",
+      headerAlign: "center",
+    },
+    {
       field: "user_name",
       headerName: "اسم المسخدم",
       type: "string",
@@ -171,11 +189,9 @@ function Daily() {
       align: "center",
       headerAlign: "center",
     },
-  ];
+  ]; 
 
-  const expensesColumns = [];
-
-  const columns = [
+  const expensesColumns = [
     {
       field: "paid_rest_usd",
       headerName: "المدفوع/الباقي USD ",
@@ -196,73 +212,10 @@ function Daily() {
       headerAlign: "center",
     },
     {
-      field: "total_price",
-      headerName: "الاجمالي",
+      field: "description",
+      headerName: "وصف",
       type: "string",
-      width: 60,
-      editable: false,
-      align: "center",
-      headerAlign: "center",
-    },
-    {
-      field: "single_price",
-      headerName: "الفردي",
-      type: "string",
-      width: 60,
-      editable: false,
-      align: "center",
-      headerAlign: "center",
-    },
-    {
-      field: "creditor",
-      headerName: "دائن",
-      type: "string",
-      width: 60,
-      editable: true,
-      align: "center",
-      headerAlign: "center",
-    },
-    {
-      field: "agent",
-      headerName: "العميل",
-      type: "string",
-      width: 60,
-      editable: true,
-      align: "center",
-      headerAlign: "center",
-    },
-    {
-      field: "quantity",
-      headerName: "الكميه",
-      type: "number",
-      width: 60,
-      editable: true,
-      align: "center",
-      headerAlign: "center",
-    },
-    {
-      field: "category",
-      headerName: "اسم الصنف",
-      type: "string",
-      width: 80,
-      editable: false,
-      align: "center",
-      headerAlign: "center",
-    },
-    {
-      field: "product_name",
-      headerName: "اسم المنتج",
-      type: "string",
-      width: 80,
-      editable: false,
-      align: "center",
-      headerAlign: "center",
-    },
-    {
-      field: "product_id",
-      headerName: "رقم المنتج",
-      type: "number",
-      width: 80,
+      width: 125,
       editable: true,
       align: "center",
       headerAlign: "center",
@@ -294,6 +247,7 @@ function Daily() {
       headerAlign: "center",
     },
   ];
+ 
 
   const rows = [
     {
@@ -301,9 +255,11 @@ function Daily() {
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
       total_price: "45$",
+      discount:"1$",
       single_price: 1,
       creditor: "لا",
       agent: "علي",
+      description:"ubs1",
       quantity: 5,
       category: "هواتف",
       product_name: "شاحن",
@@ -316,9 +272,11 @@ function Daily() {
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
       total_price: "45$",
+      discount:"1$",
       single_price: 1,
       creditor: "لا",
       agent: "علي",
+      description:"ubs1",
       quantity: 5,
       category: "هواتف",
       product_name: "شاحن",
@@ -331,9 +289,11 @@ function Daily() {
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
       total_price: "45$",
+      discount:"1$",
       single_price: 1,
       creditor: "لا",
       agent: "علي",
+      description:"ubs1",
       quantity: 5,
       category: "هواتف",
       product_name: "شاحن",
@@ -346,9 +306,11 @@ function Daily() {
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
       total_price: "45$",
+      discount:"1$",
       single_price: 1,
       creditor: "لا",
       agent: "علي",
+      description:"ubs1",
       quantity: 5,
       category: "هواتف",
       product_name: "شاحن",
@@ -361,9 +323,11 @@ function Daily() {
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
       total_price: "45$",
+      discount:"1$",
       single_price: 1,
       creditor: "لا",
       agent: "علي",
+      description:"ubs1",
       quantity: 5,
       category: "هواتف",
       product_name: "شاحن",
@@ -376,9 +340,11 @@ function Daily() {
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
       total_price: "45$",
+      discount:"1$",
       single_price: 1,
       creditor: "لا",
       agent: "علي",
+      description:"ubs1",
       quantity: 5,
       category: "هواتف",
       product_name: "شاحن",
@@ -501,10 +467,10 @@ function Daily() {
             <p>المصاريف</p>
           </div>
           {expenses && (
-            <div className="w-full h-full ">
+            <div className="w-auto h-full ">
               <DataGrid
                 rows={rows}
-                columns={columns}
+                columns={expensesColumns}
                 pageSize={5}
                 rowsPerPageOptions={[15, 25, 50]}
                 rowHeight={40}
