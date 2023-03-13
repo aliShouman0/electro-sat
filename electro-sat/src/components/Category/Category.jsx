@@ -7,15 +7,15 @@ function Category({ id, icon, title, products, pieces }) {
   const titleRef = useRef(title);
 
   return (
-    <div className="bg-secondary h-52 w-44 p-5 relative rounded-xl cursor-pointer hover:opacity-70 transition-all ease-in-out">
+    <div className="bg-secondary h-52 w-48 p-5 relative rounded-xl cursor-pointer hover:opacity-70 transition-all ease-in-out">
       <div className="del absolute top-2 left-2">
         <FontAwesomeIcon icon={faTrash} color="white" />
       </div>
       <div className="img text-center">
-        <FontAwesomeIcon icon={icon} color="white" size="5x" />
+        <FontAwesomeIcon icon={icon} color="white" size="3x" />
       </div>
       <div className="description mt-4 text-white flex  flex-col items-end font-bold ">
-        <div className="title mb-2 flex items-center justify-center w-full">
+        <div className="title mb-2 flex items-center justify-center w-full ">
           {editName ? (
             <input
               type="text"
@@ -27,7 +27,7 @@ function Category({ id, icon, title, products, pieces }) {
               }}
             />
           ) : (
-            <p className=" text-xl ">{title}</p>
+            <p className=" text-2xl ">{title}</p>
           )}
           <FontAwesomeIcon
             onClick={() => {
@@ -37,10 +37,10 @@ function Category({ id, icon, title, products, pieces }) {
             color="white"
           />
         </div>
-        <p>
+        <p className="text-lg">
           منتج: <span>{products}</span>
         </p>
-        <p>
+        <p className="text-lg">
           مجموع القطع: <span>{pieces}</span>
         </p>
       </div>
