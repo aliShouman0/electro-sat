@@ -4,6 +4,7 @@ import Login from "./pages/Login/Login";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Daily from "./pages/Daily/Daily";
 import Stock from "./pages/Stock/Stock";
+import Expenses from "./pages/Expenses/Expenses";
 
 
 function App() {
@@ -15,6 +16,8 @@ function App() {
       <Route path={"/dashboard"} element={<Dashboard />} /> 
       <Route path={"/daily"} element={<Daily  />} /> 
       <Route path={"/stock"} element={<Stock  />} /> 
+      <Route path={"/expenses"} element={<Expenses  />} /> 
+
 
     </Routes>
   </BrowserRouter>
