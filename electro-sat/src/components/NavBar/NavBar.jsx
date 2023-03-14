@@ -40,7 +40,7 @@ function NavBar({ userName, userImg }) {
         </div>
 
         <div className="userImage h-12  w-12">
-          <img src={userImg} alt="userImg" lassName="h-full w-full" />
+          <img src={userImg} alt="userImg" className="h-full w-full" />
         </div>
       </div>
 
