@@ -1,10 +1,16 @@
 import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 function Category({ id, icon, title, products, pieces }) {
   const [editName, setEditName] = useState(false);
   const titleRef = useRef(title);
+
+  useEffect(() => {
+    if (editName) {
+      titleRef.current.focus();
+    }
+  }, [editName]);
 
   return (
     <div className="bg-secondary h-52 w-48 p-5 relative rounded-xl cursor-pointer hover:opacity-70 transition-all ease-in-out">
@@ -31,7 +37,7 @@ function Category({ id, icon, title, products, pieces }) {
           )}
           <FontAwesomeIcon
             onClick={() => {
-              setEditName(!editName); 
+              setEditName(!editName);
             }}
             icon={faEdit}
             color="white"
