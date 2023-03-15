@@ -1,10 +1,12 @@
 import { faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Category({ id, icon, title, products, pieces }) {
   const [editName, setEditName] = useState(false);
   const titleRef = useRef(title);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (editName) {
@@ -13,7 +15,7 @@ function Category({ id, icon, title, products, pieces }) {
   }, [editName]);
 
   return (
-    <div className="bg-secondary h-52 w-48 p-5 relative rounded-xl cursor-pointer hover:opacity-70 transition-all ease-in-out">
+    <div className="bg-secondary h-52 w-48 p-5 relative rounded-xl hover:opacity-70 transition-all ease-in-out">
       <div className="del absolute top-2 left-2">
         <FontAwesomeIcon icon={faTrash} color="white" />
       </div>
@@ -21,7 +23,7 @@ function Category({ id, icon, title, products, pieces }) {
         <FontAwesomeIcon icon={icon} color="white" size="3x" />
       </div>
       <div className="description mt-4 text-white flex  flex-col items-end font-bold ">
-        <div className="title mb-2 flex items-center justify-center w-full ">
+        <div className="title mb-2 flex items-center justify-center w-full cursor-pointer ">
           {editName ? (
             <input
               type="text"
@@ -33,7 +35,12 @@ function Category({ id, icon, title, products, pieces }) {
               }}
             />
           ) : (
-            <p className=" text-2xl ">{title}</p>
+            <p
+              className=" text-2xl  "
+              onClick={() => navigate("/stock/category", { title })}
+            >
+              {title}
+            </p>
           )}
           <FontAwesomeIcon
             onClick={() => {
