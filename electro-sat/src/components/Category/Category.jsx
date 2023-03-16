@@ -37,7 +37,9 @@ function Category({ id, icon, title, products, pieces }) {
           ) : (
             <p
               className=" text-2xl  "
-              onClick={() => navigate("/stock/category", { title })}
+              onClick={() =>
+                navigate("/stock/category", { state: { title, icon } })
+              }
             >
               {title}
             </p>
