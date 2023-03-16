@@ -27,7 +27,7 @@ function SideBar() {
               البضاعه
             </p>
           </NavLink>
-          <NavLink to={"/login"}>
+          <NavLink to={"/creditors"}>
             <p className="w-full h-11  mb-3 flex items-center justify-center  hover:opacity-80 ">
               الديون
             </p>

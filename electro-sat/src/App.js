@@ -6,6 +6,7 @@ import Daily from "./pages/Daily/Daily";
 import Stock from "./pages/Stock/Stock";
 import Expenses from "./pages/Expenses/Expenses";
 import Category from "./pages/Category/Category";
+import Creditors from "./pages/Creditors/Creditors";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
       <Route path={"/stock"} element={<Stock  />} /> 
       <Route path={"/expenses"} element={<Expenses  />} /> 
       <Route path={"/stock/category"} element={<Category  />} /> 
+      <Route path={"/creditors"} element={<Creditors  />} /> 
 
 
     </Routes>
