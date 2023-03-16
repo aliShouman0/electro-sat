@@ -30,21 +30,36 @@ function Stock() {
         </div>
 
         <div className="flex justify-end  gap-4 flex-wrap ">
-          <Category title={"كهرباء"} products={14} pieces={240} icon={faPlug} />
-          <Category title={"هواتف"} products={64} pieces={540} icon={faPhone} />
           <Category
+            key={10}
+            title={"كهرباء"}
+            products={14}
+            pieces={240}
+            icon={faPlug}
+          />
+          <Category
+            key={2}
+            title={"هواتف"}
+            products={64}
+            pieces={540}
+            icon={faPhone}
+          />
+          <Category
+            key={1}
             title={"ستالايت"}
             products={10}
             pieces={162}
             icon={faSatelliteDish}
           />
           <Category
+            key={3}
             title={"مراقبه"}
             products={36}
             pieces={652}
             icon={faCamera}
           />
           <Category
+            key={4}
             title={"كمبيوتر"}
             products={32}
             pieces={236}
