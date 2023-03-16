@@ -143,7 +143,7 @@ function Category() {
           className="text-secondary absolute top-0 left-0 "
         />
 
-        <div className="top-bar bg-greyBar h-14 py-2  w-3/4 rounded-lg flex items-center  justify-end font-bold  mb-1 text-white">
+        <div className="top-bar bg-greyBar h-14 py-2  w-5/6 rounded-lg flex items-center  justify-end font-bold  mb-1 text-white">
           <button className="bg-secondary mr-4 py-2 px-6   text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	 ">
             اضافه منتج
           </button>
