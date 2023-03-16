@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import NavBar from "../../components/NavBar/NavBar";
 import SideBar from "../../components/SideBar/SideBar";
 import userImg from "../../assets/images/userImg.png";
 import { DataGrid } from "@mui/x-data-grid";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Category() {
-  const { title } = useParams();
+  const { state } = useLocation();
   const [selectionModel, setSelectionModel] = useState([]);
   const columns = [
     {
@@ -136,7 +137,13 @@ function Category() {
       <NavBar userName={"علي شومان"} userImg={userImg} />
       <SideBar />
       <main className="fixed  w-[80%] h-full overflow-y-auto overflow-x-hidden    top-28  right-44 flex flex-col items-end  ">
-        <div className="top-bar bg-greyBar h-14 py-2  w-3/4 rounded-lg flex items-center  justify-end font-bold  mb-3 text-white">
+        <FontAwesomeIcon
+          icon={state.icon}
+          size={"3x"}
+          className="text-secondary absolute top-0 left-0 "
+        />
+
+        <div className="top-bar bg-greyBar h-14 py-2  w-3/4 rounded-lg flex items-center  justify-end font-bold  mb-1 text-white">
           <button className="bg-secondary mr-4 py-2 px-6   text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	 ">
             اضافه منتج
           </button>
@@ -145,14 +152,17 @@ function Category() {
           </button>
         </div>
 
-        <div className="flex justify-end  gap-4 flex-wrap h-1/2 w-full">
-          <div className="w-auto h-full  m-auto">
+        <div className="h-3/4 w-full flex flex-col items-center mt-5   ">
+          <p className="w-1/4 h-10 bg-secondary mb-3  text-white  rounded-lg flex items-center justify-center text-lg font-bold">
+            {state.title}
+          </p>
+          <div className="w-auto h-3/4 ">
             <DataGrid
               rows={rows}
               columns={columns}
               pageSize={5}
               rowsPerPageOptions={[15, 25, 50]}
-              rowHeight={40}
+              rowHeight={30}
               checkboxSelection={false}
               selectionModel={selectionModel}
               onSelectionModelChange={handleSelectionModelChange}
