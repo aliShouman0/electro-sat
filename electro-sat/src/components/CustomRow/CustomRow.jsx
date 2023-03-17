@@ -14,8 +14,16 @@ import {
 } from "@mui/material";
 
 function CustomRow(props) {
-  const { row, rowValue, nestedTableTitle, nestedRowTitle, nestedRowValue } =
-    props;
+  const {
+    row,
+    rowValue,
+    nestedTableTitle,
+    nestedRowTitle,
+    nestedRowValue,
+    secondTable,
+    secondTableRowTitle,
+    secondTableRowValue,
+  } = props;
   const [open, setOpen] = React.useState(false);
 
   return (
@@ -77,6 +85,45 @@ function CustomRow(props) {
           </Collapse>
         </TableCell>
       </TableRow>
+
+      {secondTable && (
+        <TableRow>
+          <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={4}>
+            <Collapse in={open} timeout="auto" unmountOnExit>
+              <Box sx={{ margin: 1, marginRight: "auto" }}>
+                <Typography
+                  className="text-end"
+                  variant="h6"
+                  gutterBottom
+                  component="div"
+                >
+                  {secondTable}
+                </Typography>
+                <Table size="small" aria-label="purchases" className="mb-8">
+                  <TableHead>
+                    <TableRow className="bg-primary  ">
+                      {secondTableRowTitle.map((val) => (
+                        <TableCell align="center" sx={{ color: "white" }}>
+                          {val}
+                        </TableCell>
+                      ))}
+                    </TableRow>
+                  </TableHead>
+                  <TableBody className="bg-white">
+                    {secondTableRowValue.map((pay) => (
+                      <TableRow>
+                        {pay.map((val) => (
+                          <TableCell align="center">{val}</TableCell>
+                        ))}
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </Box>
+            </Collapse>
+          </TableCell>
+        </TableRow>
+      )}
     </React.Fragment>
   );
 }
