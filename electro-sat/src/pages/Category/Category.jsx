@@ -1,8 +1,5 @@
 import React, { useState } from "react";
-import { useLocation, useParams } from "react-router-dom";
-import NavBar from "../../components/NavBar/NavBar";
-import SideBar from "../../components/SideBar/SideBar";
-import userImg from "../../assets/images/userImg.png";
+import { useLocation } from "react-router-dom";
 import { DataGrid } from "@mui/x-data-grid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -134,8 +131,6 @@ function Category() {
 
   return (
     <>
-      <NavBar userName={"علي شومان"} userImg={userImg} />
-      <SideBar />
       <main className="fixed  w-[80%] h-full overflow-y-auto overflow-x-hidden    top-28  right-44 flex flex-col items-end  ">
         <FontAwesomeIcon
           icon={state.icon}

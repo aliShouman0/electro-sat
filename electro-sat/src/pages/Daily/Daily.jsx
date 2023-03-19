@@ -1,7 +1,4 @@
-import React, { useState } from "react";
-import NavBar from "../../components/NavBar/NavBar";
-import userImg from "../../assets/images/userImg.png";
-import SideBar from "../../components/SideBar/SideBar";
+import React, { useState } from "react"; 
 import { DataGrid } from "@mui/x-data-grid";
 
 function Daily() {
@@ -189,7 +186,7 @@ function Daily() {
       align: "center",
       headerAlign: "center",
     },
-  ]; 
+  ];
 
   const expensesColumns = [
     {
@@ -247,7 +244,6 @@ function Daily() {
       headerAlign: "center",
     },
   ];
- 
 
   const rows = [
     {
@@ -255,11 +251,11 @@ function Daily() {
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
       total_price: "45$",
-      discount:"1$",
+      discount: "1$",
       single_price: 1,
       creditor: "لا",
       agent: "علي",
-      description:"ubs1",
+      description: "ubs1",
       quantity: 5,
       category: "هواتف",
       product_name: "شاحن",
@@ -272,11 +268,11 @@ function Daily() {
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
       total_price: "45$",
-      discount:"1$",
+      discount: "1$",
       single_price: 1,
       creditor: "لا",
       agent: "علي",
-      description:"ubs1",
+      description: "ubs1",
       quantity: 5,
       category: "هواتف",
       product_name: "شاحن",
@@ -289,11 +285,11 @@ function Daily() {
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
       total_price: "45$",
-      discount:"1$",
+      discount: "1$",
       single_price: 1,
       creditor: "لا",
       agent: "علي",
-      description:"ubs1",
+      description: "ubs1",
       quantity: 5,
       category: "هواتف",
       product_name: "شاحن",
@@ -306,11 +302,11 @@ function Daily() {
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
       total_price: "45$",
-      discount:"1$",
+      discount: "1$",
       single_price: 1,
       creditor: "لا",
       agent: "علي",
-      description:"ubs1",
+      description: "ubs1",
       quantity: 5,
       category: "هواتف",
       product_name: "شاحن",
@@ -323,11 +319,11 @@ function Daily() {
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
       total_price: "45$",
-      discount:"1$",
+      discount: "1$",
       single_price: 1,
       creditor: "لا",
       agent: "علي",
-      description:"ubs1",
+      description: "ubs1",
       quantity: 5,
       category: "هواتف",
       product_name: "شاحن",
@@ -340,11 +336,11 @@ function Daily() {
       paid_rest_usd: "15$",
       paid_rest_lira: "115,000 L.L",
       total_price: "45$",
-      discount:"1$",
+      discount: "1$",
       single_price: 1,
       creditor: "لا",
       agent: "علي",
-      description:"ubs1",
+      description: "ubs1",
       quantity: 5,
       category: "هواتف",
       product_name: "شاحن",
@@ -364,8 +360,6 @@ function Daily() {
 
   return (
     <>
-      <NavBar userName={"علي شومان"} userImg={userImg} />
-      <SideBar />
       <main className="fixed   w-[80%] h-full flex flex-col items-end  overflow-y-auto overflow-x-hidden    top-28  right-44 text-white font-bold">
         <div className="top-bar bg-greyBar h-14 py-2 w-5/6  rounded-lg flex items-center  justify-end font-bold  ">
           <button className="bg-secondary mr-4 py-2 px-6   text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	    ">

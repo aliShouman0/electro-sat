@@ -1,7 +1,4 @@
 import React from "react";
-import NavBar from "../../components/NavBar/NavBar";
-import SideBar from "../../components/SideBar/SideBar";
-import userImg from "../../assets/images/userImg.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faArrowDown,
@@ -139,9 +136,6 @@ function Creditors() {
 
   return (
     <>
-      <NavBar userName={"علي شومان"} userImg={userImg} />
-      <SideBar />
-
       <div className="fixed  top-bar bg-greyBar h-14 py-2 w-3/4  rounded-lg flex items-center  justify-end font-bold top-28  right-44 text-white ">
         <form onSubmit={search}>
           <button
