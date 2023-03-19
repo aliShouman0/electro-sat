@@ -103,9 +103,9 @@ function Creditors() {
     "name",
   ];
   const nestedRowTitle = [
-    "L.L مجموع	",
     "$ مجموع",
-    "الكميه	",
+    "L.L مجموع",
+    "الكميه",
     "اسم المنتج",
     "اسم الصنف",
     "رقم المنتج	",
@@ -125,8 +125,8 @@ function Creditors() {
     "",
   ];
   const secondTableRowTitle = [
-    "L.L مجموع	",
     "$ مجموع",
+    "L.L مجموع",
     "اسم المسخدم",
     "التاريح",
   ];
