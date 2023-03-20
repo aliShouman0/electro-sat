@@ -385,6 +385,11 @@ function Records() {
             className="bg-secondary mr-4 py-2 px-2  text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	 outline-none w-40  text-white placeholder:text-white text-right "
           />
           <input
+            type="number"
+            className="bg-secondary mr-4 py-2 px-2  text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	 outline-none w-40  text-white placeholder:text-white text-right "
+            placeholder="رقم المنتج"
+          />
+          <input
             type="text"
             className="bg-secondary mr-4 py-2 px-2  text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	 outline-none w-40  text-white placeholder:text-white text-right "
             placeholder="الاسم"
