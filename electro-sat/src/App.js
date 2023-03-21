@@ -9,6 +9,7 @@ import Category from "./pages/Category/Category";
 import Creditors from "./pages/Creditors/Creditors";
 import Layout from "./Layout/Layout";
 import Records from "./pages/Records/Records";
+import HR from "./pages/HR/HR";
 
 function App() {
   return (
@@ -70,6 +71,14 @@ function App() {
             element={
               <Layout>
                 <Records />
+              </Layout>
+            }
+          />
+          <Route
+            path={"/hr"}
+            element={
+              <Layout>
+                <HR />
               </Layout>
             }
           />

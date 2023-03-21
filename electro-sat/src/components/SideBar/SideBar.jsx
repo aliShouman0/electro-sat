@@ -37,9 +37,9 @@ function SideBar() {
               السجلات
             </p>
           </NavLink>
-          <NavLink to={"/login"}>
+          <NavLink to={"/hr"}>
             <p className="w-full h-11  mb-3 flex items-center justify-center  hover:opacity-80 ">
-              الموردون
+            الموارد البشرية
             </p>
           </NavLink>
         </div>
