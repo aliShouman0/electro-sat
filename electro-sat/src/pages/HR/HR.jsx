@@ -1,6 +1,12 @@
+import {
+  faCircleExclamation,
+  faDiagnoses,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
 
 function HR() {
+  const [superAdmin, setSuperAdmin] = useState(false);
   return (
     <>
       {" "}
@@ -12,6 +18,16 @@ function HR() {
           <button className="bg-secondary mr-4 py-2 px-6   text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	    ">
             العملاء
           </button>
+          {superAdmin && (
+            <button className="bg-secondary mr-4 py-2 px-6   text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	    ">
+              المستخدمين
+              <FontAwesomeIcon
+                icon={faCircleExclamation}
+                size="lg"
+                className="ml-2"
+              />
+            </button>
+          )}
         </div>
       </main>
     </>
