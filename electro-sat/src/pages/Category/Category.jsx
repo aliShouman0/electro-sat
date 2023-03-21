@@ -175,7 +175,7 @@ function Category() {
           <p className="w-1/4 h-10 bg-secondary mb-3  text-white  rounded-lg flex items-center justify-center text-lg font-bold">
             {state.title}
           </p>
-          <div className="w-auto h-3/4 ">
+          <div className="w-5/6 h-3/4 ">
             <DataGrid
               rows={rows}
               columns={columns}
