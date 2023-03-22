@@ -1,24 +1,16 @@
-import React from "react";
-import NavBar from "../../components/NavBar/NavBar";
-import SideBar from "../../components/SideBar/SideBar";
-
-import userImg from "../../assets/images/userImg.png";
+import React from "react"; 
 import Category from "../../components/Category/Category";
 import {
   faCamera,
   faLaptop,
   faPhone,
-  faPlug,
-  faSatellite,
-  faSatelliteDish,
-  faTrash,
+  faPlug, 
+  faSatelliteDish, 
 } from "@fortawesome/free-solid-svg-icons";
 
 function Stock() {
   return (
-    <>
-      <NavBar userName={"علي شومان"} userImg={userImg} />
-      <SideBar />
+    <> 
       <main className="fixed  w-[80%] h-full overflow-y-auto overflow-x-hidden    top-28  right-44 flex flex-col items-end">
         <div className="top-bar bg-greyBar h-14 py-2 w-5/6  rounded-lg flex items-center  justify-end font-bold  mb-3 text-white">
           <button className="bg-secondary mr-4 py-2 px-6   text-xs  rounded-lg cursor-not-allowed opacity-30    ">
