@@ -33,7 +33,7 @@ function HR() {
       field: "phoneNumber",
       headerName: "رقم الهاتف",
       type: "string",
-      width: 80,
+      width: 100,
       editable: false,
       align: "center",
       headerAlign: "center",
@@ -60,7 +60,31 @@ function HR() {
   const rows = [
     {
       id: 1,
-      time: "12:35",
+      notes: "great",
+      rate: "3.5",
+      phoneNumber: "7864387",
+      name: "issaa",
+    },
+    {
+      id: 2,
+      notes: "great",
+      rate: "3.5",
+      phoneNumber: "8741924",
+      name: "mosa",
+    },
+    {
+      id: 3,
+      notes: "great",
+      rate: "4.5",
+      phoneNumber: "18545480",
+      name: "yzan",
+    },
+    {
+      id: 4,
+      notes: "great",
+      rate: "3.5",
+      phoneNumber: "71993980",
+      name: "moh",
     },
   ];
   const handleSelectionModelChange = (newSelection) => {
