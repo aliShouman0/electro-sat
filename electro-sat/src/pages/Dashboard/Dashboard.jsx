@@ -46,6 +46,15 @@ function Dashboard() {
           />
         </div>
         <div className="h-1/2 w-1/2 mt-10">
+          <CustomResponsiveBar
+            data={expenses}
+            keys={["علي", "باقر", "مهدي", "بيت", "احمد"]}
+            indexBy={"name"}
+            axisBottomLegend={""}
+            axisLeftLegend={"L . L"}
+          />
+        </div>
+        <div className="h-1/2 w-1/2 mt-10">
           <ResponsivePie
             data={data2}
             margin={{ top: 40, right: 80, bottom: 80, left: 80 }}
