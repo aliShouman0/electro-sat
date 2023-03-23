@@ -1,15 +1,15 @@
 export const data = [
   {
-    items: "Receiver",
-    Receiver: 148,
+    items: "رسيفر",
+    رسيفر: 148,
   },
   {
-    items: "Disque",
-    Disque: 57,
+    items: "دايزك",
+    دايزك: 57,
   },
   {
-    items: "Cable",
-    Cable: 107,
+    items: "شريط",
+    شريط: 107,
   },
   {
     items: "Mtc",
@@ -18,6 +18,28 @@ export const data = [
   {
     items: "Alfa",
     Alfa: 82,
+  },
+];
+export const expenses = [
+  {
+    name: "علي",
+    علي: 148,
+  },
+  {
+    name: "باقر",
+    باقر: 57,
+  },
+  {
+    name: "مهدي",
+    مهدي: 107,
+  },
+  {
+    name: "بيت",
+    بيت: 175,
+  },
+  {
+    name: "احمد",
+    احمد: 82,
   },
 ];
 export const data2 = [
