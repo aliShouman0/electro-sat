@@ -14,7 +14,7 @@ function Dashboard() {
             from="2016-01-01"
             to="2016-07-12"
             emptyColor="#eeeeee"
-            colors={["#61cdbb", "#97e3d5", "#e8c1a0", "#f47560"]}
+            colors={["#BFD4D4", "#88D1D0", "#40C1BF", "#04FFFA"]}
             margin={{ top: 0, right: 40, bottom: 0, left: 40 }}
             yearSpacing={40}
             monthBorderColor="#ffffff"
@@ -38,58 +38,25 @@ function Dashboard() {
         <div className="h-1/2 w-1/2 mt-10">
           <ResponsiveBar
             data={data}
-            keys={["hot dog", "burger", "sandwich", "kebab", "fries", "donut"]}
-            indexBy="country"
+            keys={["Receiver", "Disque", "Cable", "Mtc", "Alfa"]} 
+            indexBy="items"
             margin={{ top: 50, right: 130, bottom: 50, left: 60 }}
             padding={0.3}
             valueScale={{ type: "linear" }}
-            indexScale={{ type: "band", round: true }}
-            colors={{ scheme: "nivo" }}
-            defs={[
-              {
-                id: "dots",
-                type: "patternDots",
-                background: "inherit",
-                color: "#38bcb2",
-                size: 4,
-                padding: 1,
-                stagger: true,
-              },
-              {
-                id: "lines",
-                type: "patternLines",
-                background: "inherit",
-                color: "#eed312",
-                rotation: -45,
-                lineWidth: 6,
-                spacing: 10,
-              },
-            ]}
-            fill={[
-              {
-                match: {
-                  id: "fries",
-                },
-                id: "dots",
-              },
-              {
-                match: {
-                  id: "sandwich",
-                },
-                id: "lines",
-              },
-            ]}
-            borderColor={{
-              from: "color",
-              modifiers: [["darker", 1.6]],
-            }}
-            axisTop={null}
-            axisRight={null}
+            indexScale={{ type: "band", round: true }} 
+            colors={[
+              "#BFD4D4",
+              "#88D1D0",
+              "#40C1BF",
+              "#04FFFA",
+              "#444444",
+              "#142D2C",
+            ]} 
             axisBottom={{
               tickSize: 5,
               tickPadding: 5,
               tickRotation: 0,
-              legend: "country",
+              legend: "keys",
               legendPosition: "middle",
               legendOffset: 32,
             }}
@@ -97,7 +64,7 @@ function Dashboard() {
               tickSize: 5,
               tickPadding: 5,
               tickRotation: 0,
-              legend: "food",
+              legend: "count",
               legendPosition: "middle",
               legendOffset: -40,
             }}
@@ -125,19 +92,12 @@ function Dashboard() {
                   {
                     on: "hover",
                     style: {
-                      itemOpacity: 1,
+                      itemOpacity: 0.51,
                     },
                   },
                 ],
               },
             ]}
-            role="application"
-            ariaLabel="Nivo bar chart demo"
-            barAriaLabel={function (e) {
-              return (
-                e.id + ": " + e.formattedValue + " in country: " + e.indexValue
-              );
-            }}
           />
         </div>
         <div className="h-1/2 w-1/2 mt-10">
