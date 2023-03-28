@@ -8,7 +8,7 @@ import InfoBox from "../../components/InfoBox/InfoBox";
 function Dashboard() {
   return (
     <>
-      <main className="fixed  w-[80%] h-5/6 overflow-auto  top-28  right-44 flex flex-wrap ">
+      <main className="fixed  w-[80%] h-5/6   top-28  right-44 flex flex-wrap overflow-x-hidden overflow-y-auto">
         <div className="w-full h-1/3">
           <ResponsiveCalendar
             data={calendarData}
