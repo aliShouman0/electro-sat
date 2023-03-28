@@ -6,6 +6,8 @@ function InfoBox({
   todayTotalUDS,
   oldTotalLira,
   todayTotalLira,
+  daily,
+  data,
 }) {
   return (
     <div className="bg-secondary w-52 h-36 rounded-lg text-center p-1 m-1">
@@ -13,18 +15,33 @@ function InfoBox({
         <p className="font-bold ">{title}</p>
       </div>
       <div className="info relative my-2">
-        <p>
-          {oldTotalLira} L.L + {oldTotalUSD}$
-        </p>
-
+        {!daily && (
+          <p>
+            {oldTotalLira} L.L + {oldTotalUSD}$
+          </p>
+        )}
+        {daily && <p>{data[1]} L.L</p>}
         <p className="font-extrabold text-xl absolute left-4 top-2">+</p>
-        <p>
-          {todayTotalLira} L.L + {todayTotalUDS}$
-        </p>
+
+        {!daily && (
+          <p>
+            {todayTotalLira} L.L + {todayTotalUDS}$
+          </p>
+        )}
+        {daily && <p>{data[0]} $</p>}
+
         <hr className=" mx-auto my-2  w-3/4 " />
-        <p className="font-bold">
-          {oldTotalLira + todayTotalLira} L.L + {oldTotalUSD + todayTotalUDS}$
-        </p>
+        {!daily && (
+          <p className="font-bold">
+            {oldTotalLira + todayTotalLira} L.L + {oldTotalUSD + todayTotalUDS}$
+          </p>
+        )}
+
+        {daily && (
+          <p className="font-bold">
+            {data[1]} L.L // {data[0]}$
+          </p>
+        )}
       </div>
     </div>
   );
