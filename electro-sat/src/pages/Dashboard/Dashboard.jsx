@@ -1,4 +1,4 @@
-import React from "react"; 
+import React from "react";
 import { ResponsivePie } from "@nivo/pie";
 import { ResponsiveCalendar } from "@nivo/calendar";
 import { calendarData, data, data2, expenses } from "./mockData";
@@ -36,14 +36,16 @@ function Dashboard() {
             ]}
           />
         </div>
-        <div className="w-full h-1/3 flex flex-wrap items-center justify-center">
+        <div className="w-full h-1/3 flex flex-wrap items-center justify-around">
           <InfoBox
             title={"الصندوق"}
             oldTotalUSD={14}
             todayTotalUDS={16}
             oldTotalLira={566000}
-            todayTotalLira={245000} 
-          /> 
+            todayTotalLira={245000}
+          />
+          <InfoBox title={"مبيعات اليوم"} daily={true} data={[145, 450000]} />
+          <InfoBox title={"مصاريف اليوم"} daily={true} data={[26, 6210000]} />
         </div>
         <div className="h-1/2 w-1/2 mt-10">
           <CustomResponsiveBar
