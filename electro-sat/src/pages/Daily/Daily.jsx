@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { DataGrid } from "@mui/x-data-grid";
 import { creditorColumns, expensesColumns, rows, salesColumns } from "./data";
+import PopUp from "../../components/PopUp/PopUp";
 
 function Daily() {
+  const [selling, setSelling] = useState(true);
 
   const [selectionModel, setSelectionModel] = useState([]);
   const [sales, setSales] = useState(true);
@@ -14,6 +16,7 @@ function Daily() {
 
   return (
     <>
+      {selling && <PopUp selling={setSelling}></PopUp>}
       <main className="fixed   w-[80%] h-full flex flex-col items-end  overflow-y-auto overflow-x-hidden    top-28  right-44 text-white font-bold">
         <div className="top-bar bg-greyBar h-14 py-2 w-5/6  rounded-lg flex items-center  justify-end font-bold  ">
           <button className="bg-secondary mr-4 py-2 px-6   text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	    ">
@@ -22,7 +25,10 @@ function Daily() {
           <button className="bg-secondary mr-4 py-2 px-6   text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	    ">
             دفع دائن
           </button>
-          <button className="bg-secondary mr-4 py-2 px-6   text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	    ">
+          <button
+            onClick={() => setSelling(true)}
+            className="bg-secondary mr-4 py-2 px-6   text-xs  rounded-lg hover:opacity-60 hover:font-semibold hover:text-sm transition-all	    "
+          >
             مبيع
           </button>
         </div>
